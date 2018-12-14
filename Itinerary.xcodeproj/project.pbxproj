@@ -12,6 +12,9 @@
 		3BAA735C21C2A1E800BD680A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA735B21C2A1E800BD680A /* Data.swift */; };
 		3BBD583721C3DEA000F951F5 /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD583621C3DEA000F951F5 /* TripsTableViewCell.swift */; };
 		3BBD583A21C3E8DB00F951F5 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD583921C3E8DB00F951F5 /* UIViewExtensions.swift */; };
+		3BBD583D21C3EA6A00F951F5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD583C21C3EA6A00F951F5 /* Theme.swift */; };
+		3BBD583F21C3EBE000F951F5 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3BBD583E21C3EBE000F951F5 /* Nunito-Regular.ttf */; };
+		3BBD584121C3EDAB00F951F5 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BBD584021C3EDAB00F951F5 /* Colors.xcassets */; };
 		E30A408521C2F9F9008B9B23 /* TripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E30A408421C2F9F9008B9B23 /* TripsViewController.storyboard */; };
 		E30A408721C2FA0D008B9B23 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30A408621C2FA0D008B9B23 /* TripsViewController.swift */; };
 		E3455A3C21C03F4E00E73127 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3455A3B21C03F4E00E73127 /* AppDelegate.swift */; };
@@ -25,6 +28,9 @@
 		3BAA735B21C2A1E800BD680A /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		3BBD583621C3DEA000F951F5 /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
 		3BBD583921C3E8DB00F951F5 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		3BBD583C21C3EA6A00F951F5 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		3BBD583E21C3EBE000F951F5 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-Regular.ttf"; path = "../../../../../Library/Fonts/Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		3BBD584021C3EDAB00F951F5 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E30A408421C2F9F9008B9B23 /* TripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsViewController.storyboard; sourceTree = "<group>"; };
 		E30A408621C2FA0D008B9B23 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		E3455A3821C03F4E00E73127 /* Itinerary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Itinerary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +77,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		3BBD583B21C3EA5600F951F5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3BBD583E21C3EBE000F951F5 /* Nunito-Regular.ttf */,
+				3BBD583C21C3EA6A00F951F5 /* Theme.swift */,
+				3BBD584021C3EDAB00F951F5 /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E30A408221C2F9B9008B9B23 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +124,7 @@
 		E3455A3A21C03F4E00E73127 /* Itinerary */ = {
 			isa = PBXGroup;
 			children = (
+				3BBD583B21C3EA5600F951F5 /* Resources */,
 				3BBD583821C3E8AD00F951F5 /* Extensions */,
 				E30A408221C2F9B9008B9B23 /* Views */,
 				3BAA735521C2A11500BD680A /* Model */,
@@ -177,8 +194,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BBD584121C3EDAB00F951F5 /* Colors.xcassets in Resources */,
 				E3455A4621C03F5000E73127 /* LaunchScreen.storyboard in Resources */,
 				E30A408521C2F9F9008B9B23 /* TripsViewController.storyboard in Resources */,
+				3BBD583F21C3EBE000F951F5 /* Nunito-Regular.ttf in Resources */,
 				E3455A4321C03F5000E73127 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BBD583721C3DEA000F951F5 /* TripsTableViewCell.swift in Sources */,
+				3BBD583D21C3EA6A00F951F5 /* Theme.swift in Sources */,
 				3BBD583A21C3E8DB00F951F5 /* UIViewExtensions.swift in Sources */,
 				3BAA735821C2A12800BD680A /* TripModel.swift in Sources */,
 				E3455A3C21C03F4E00E73127 /* AppDelegate.swift in Sources */,
