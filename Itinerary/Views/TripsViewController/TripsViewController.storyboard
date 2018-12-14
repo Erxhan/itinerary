@@ -30,7 +30,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="159.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1CO-cy-4Cn">
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1CO-cy-4Cn" customClass="TripCardView" customModule="Itinerary" customModuleProvider="target">
                                                     <rect key="frame" x="15" y="11" width="345" height="138"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
@@ -55,11 +55,24 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JsI-90-3YC" customClass="FloatingActionButton" customModule="Itinerary" customModuleProvider="target">
+                                <rect key="frame" x="299" y="702" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="C3G-U7-72j"/>
+                                    <constraint firstAttribute="height" constant="56" id="qWu-9N-i1f"/>
+                                </constraints>
+                                <state key="normal" image="AddButton"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="L84-jq-gQx" firstAttribute="bottom" secondItem="JsI-90-3YC" secondAttribute="bottom" constant="20" id="WUf-8V-CEb"/>
+                            <constraint firstItem="L84-jq-gQx" firstAttribute="trailing" secondItem="JsI-90-3YC" secondAttribute="trailing" constant="20" id="Xel-nB-TgK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="L84-jq-gQx"/>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="JsI-90-3YC" id="v6D-cQ-Zix"/>
                         <outlet property="tableView" destination="acn-Iz-wSL" id="izX-ws-eFY"/>
                     </connections>
                 </viewController>
@@ -68,4 +81,7 @@
             <point key="canvasLocation" x="69.599999999999994" y="-333.99014778325125"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AddButton" width="20" height="20"/>
+    </resources>
 </document>
