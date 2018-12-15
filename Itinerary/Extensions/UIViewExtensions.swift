@@ -9,11 +9,16 @@
 import UIKit
 
 extension UIView {
-    func addShadowAndRoundedCorners() {
-        layer.shadowOpacity = 0.2
-        layer.shadowOffset = CGSize(width: 0, height: 2)
-        layer.shadowRadius = 2
-        layer.shadowColor = UIColor.darkGray.cgColor
-        layer.cornerRadius = 10
+    
+    func setRoundedCorners(radius: CGFloat) {
+        layer.cornerRadius = radius
+        layer.masksToBounds = true
+    }
+    
+    func setShadow(shadowColor: UIColor, shadowOpacity: Float, shadowRadius: CGFloat) {
+        layer.shadowColor = shadowColor.cgColor
+        layer.shadowOpacity = shadowOpacity
+        layer.shadowRadius = shadowRadius
+        layer.masksToBounds = false
     }
 }

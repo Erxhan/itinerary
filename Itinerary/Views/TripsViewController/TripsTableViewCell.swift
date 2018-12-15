@@ -10,7 +10,6 @@ import UIKit
 
 class TripsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var cardView: TripCardView!
     @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
