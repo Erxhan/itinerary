@@ -15,10 +15,11 @@ extension UIView {
         layer.masksToBounds = true
     }
     
-    func setShadow(shadowColor: UIColor, shadowOpacity: Float, shadowRadius: CGFloat) {
-        layer.shadowColor = shadowColor.cgColor
-        layer.shadowOpacity = shadowOpacity
-        layer.shadowRadius = shadowRadius
+    func setShadow() {
+        layer.shadowColor = Theme.accentColor?.cgColor
+        layer.shadowOpacity = 0.3
+        layer.shadowRadius = 3
+        layer.shadowOffset = CGSize(width: 0, height: 2)
         layer.masksToBounds = false
     }
 }

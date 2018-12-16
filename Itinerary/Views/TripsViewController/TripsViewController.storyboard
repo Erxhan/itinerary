@@ -31,14 +31,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1CO-cy-4Cn" customClass="TripCardView" customModule="Itinerary" customModuleProvider="target">
-                                                    <rect key="frame" x="15" y="49" width="345" height="100"/>
+                                                    <rect key="frame" x="15" y="24" width="345" height="150"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGF-JT-76x">
-                                                            <rect key="frame" x="8" y="26" width="329" height="48"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miX-Xe-1Zd" customClass="TitleLabel" customModule="Itinerary" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="8" width="329" height="134"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                            <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -49,7 +49,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="titleLabel" destination="MGF-JT-76x" id="zph-Al-jXU"/>
+                                            <outlet property="titleLabel" destination="miX-Xe-1Zd" id="Hka-p1-wOh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -61,6 +61,9 @@
                                     <constraint firstAttribute="height" constant="56" id="qWu-9N-i1f"/>
                                 </constraints>
                                 <state key="normal" image="AddButton"/>
+                                <connections>
+                                    <segue destination="iGK-V3-MRX" kind="presentation" id="EcD-iS-zeH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -78,6 +81,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lee-LR-u1X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="69.599999999999994" y="-333.99014778325125"/>
+        </scene>
+        <!--AddTripsViewController-->
+        <scene sceneID="xeK-RG-HE7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddTripsViewController" id="iGK-V3-MRX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fee-aP-3pM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="807" y="-334"/>
         </scene>
     </scenes>
     <resources>

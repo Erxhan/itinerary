@@ -10,15 +10,13 @@ import UIKit
 
 class TripsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var titleLabel: TitleLabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        titleLabel.font = UIFont(name: Theme.mainFontName, size: 32)
     }
     
     func setup(tripModel: TripModel) {
         titleLabel.text = tripModel.title
-        titleLabel.textColor = Theme.accent
     }
 }

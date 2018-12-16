@@ -23,6 +23,13 @@
 		E3455A3C21C03F4E00E73127 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3455A3B21C03F4E00E73127 /* AppDelegate.swift */; };
 		E3455A4321C03F5000E73127 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3455A4221C03F5000E73127 /* Assets.xcassets */; };
 		E3455A4621C03F5000E73127 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3455A4421C03F5000E73127 /* LaunchScreen.storyboard */; };
+		E34B6F0E21C67E680098E8A3 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B6F0D21C67E680098E8A3 /* TitleLabel.swift */; };
+		E34B6F1021C67FC50098E8A3 /* AddTripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34B6F0F21C67FC50098E8A3 /* AddTripsViewController.storyboard */; };
+		E34B6F1321C6800E0098E8A3 /* AddTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B6F1221C6800E0098E8A3 /* AddTripsViewController.swift */; };
+		E34B6F1521C6878D0098E8A3 /* PopupTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B6F1421C6878D0098E8A3 /* PopupTitleLabel.swift */; };
+		E34B6F1721C6974A0098E8A3 /* PopupActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B6F1621C6974A0098E8A3 /* PopupActionButton.swift */; };
+		E34B6F1921C69AF40098E8A3 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B6F1821C69AF40098E8A3 /* PopupView.swift */; };
+		E3EEC0B221C66357005C3AD9 /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EEC0B121C66357005C3AD9 /* UILabelExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +51,13 @@
 		E3455A4221C03F5000E73127 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3455A4521C03F5000E73127 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3455A4721C03F5000E73127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E34B6F0D21C67E680098E8A3 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
+		E34B6F0F21C67FC50098E8A3 /* AddTripsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddTripsViewController.storyboard; sourceTree = "<group>"; };
+		E34B6F1221C6800E0098E8A3 /* AddTripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripsViewController.swift; sourceTree = "<group>"; };
+		E34B6F1421C6878D0098E8A3 /* PopupTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupTitleLabel.swift; sourceTree = "<group>"; };
+		E34B6F1621C6974A0098E8A3 /* PopupActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupActionButton.swift; sourceTree = "<group>"; };
+		E34B6F1821C69AF40098E8A3 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		E3EEC0B121C66357005C3AD9 /* UILabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +94,7 @@
 			children = (
 				3BBD583921C3E8DB00F951F5 /* UIViewExtensions.swift */,
 				E325513221C444AA00886466 /* UIButtonExtensions.swift */,
+				E3EEC0B121C66357005C3AD9 /* UILabelExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -97,6 +112,7 @@
 		E30A408221C2F9B9008B9B23 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E34B6F1121C67FF20098E8A3 /* AddTripsViewController */,
 				E30A408321C2F9C8008B9B23 /* TripsViewController */,
 			);
 			path = Views;
@@ -117,6 +133,10 @@
 			children = (
 				E325513521C4467F00886466 /* FloatingActionButton.swift */,
 				E325513721C446CF00886466 /* TripCardView.swift */,
+				E34B6F0D21C67E680098E8A3 /* TitleLabel.swift */,
+				E34B6F1421C6878D0098E8A3 /* PopupTitleLabel.swift */,
+				E34B6F1621C6974A0098E8A3 /* PopupActionButton.swift */,
+				E34B6F1821C69AF40098E8A3 /* PopupView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -151,6 +171,15 @@
 				E3455A4721C03F5000E73127 /* Info.plist */,
 			);
 			path = Itinerary;
+			sourceTree = "<group>";
+		};
+		E34B6F1121C67FF20098E8A3 /* AddTripsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E34B6F0F21C67FC50098E8A3 /* AddTripsViewController.storyboard */,
+				E34B6F1221C6800E0098E8A3 /* AddTripsViewController.swift */,
+			);
+			path = AddTripsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +242,7 @@
 			files = (
 				3BBD584121C3EDAB00F951F5 /* Colors.xcassets in Resources */,
 				E3455A4621C03F5000E73127 /* LaunchScreen.storyboard in Resources */,
+				E34B6F1021C67FC50098E8A3 /* AddTripsViewController.storyboard in Resources */,
 				E30A408521C2F9F9008B9B23 /* TripsViewController.storyboard in Resources */,
 				3BBD583F21C3EBE000F951F5 /* Nunito-Regular.ttf in Resources */,
 				E3455A4321C03F5000E73127 /* Assets.xcassets in Resources */,
@@ -226,14 +256,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E34B6F1721C6974A0098E8A3 /* PopupActionButton.swift in Sources */,
 				3BBD583721C3DEA000F951F5 /* TripsTableViewCell.swift in Sources */,
 				3BBD583D21C3EA6A00F951F5 /* Theme.swift in Sources */,
 				3BBD583A21C3E8DB00F951F5 /* UIViewExtensions.swift in Sources */,
+				E34B6F1521C6878D0098E8A3 /* PopupTitleLabel.swift in Sources */,
+				E34B6F0E21C67E680098E8A3 /* TitleLabel.swift in Sources */,
 				E325513821C446CF00886466 /* TripCardView.swift in Sources */,
 				3BAA735821C2A12800BD680A /* TripModel.swift in Sources */,
 				E3455A3C21C03F4E00E73127 /* AppDelegate.swift in Sources */,
+				E34B6F1321C6800E0098E8A3 /* AddTripsViewController.swift in Sources */,
+				E34B6F1921C69AF40098E8A3 /* PopupView.swift in Sources */,
 				3BAA735A21C2A12F00BD680A /* TripFunctions.swift in Sources */,
 				E325513321C444AA00886466 /* UIButtonExtensions.swift in Sources */,
+				E3EEC0B221C66357005C3AD9 /* UILabelExtensions.swift in Sources */,
 				E325513621C4467F00886466 /* FloatingActionButton.swift in Sources */,
 				3BAA735C21C2A1E800BD680A /* Data.swift in Sources */,
 				E30A408721C2FA0D008B9B23 /* TripsViewController.swift in Sources */,
