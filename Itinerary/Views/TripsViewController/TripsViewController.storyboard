@@ -54,7 +54,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JsI-90-3YC" customClass="FloatingActionButton" customModule="Itinerary" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JsI-90-3YC" customClass="SimpleButton" customModule="Itinerary" customModuleProvider="target">
                                 <rect key="frame" x="299" y="702" width="56" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="56" id="C3G-U7-72j"/>

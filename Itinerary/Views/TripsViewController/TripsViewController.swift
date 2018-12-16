@@ -11,7 +11,7 @@ import UIKit
 class TripsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var addButton: FloatingActionButton!
+    @IBOutlet weak var addButton: SimpleButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

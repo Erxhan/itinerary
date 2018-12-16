@@ -12,8 +12,8 @@ class AddTripsViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: PopupTitleLabel!
     @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var cancelButton: PopupActionButton!
-    @IBOutlet weak var saveButton: PopupActionButton!
+    @IBOutlet weak var cancelButton: SimpleButton!
+    @IBOutlet weak var saveButton: SimpleButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

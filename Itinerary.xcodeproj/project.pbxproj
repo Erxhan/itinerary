@@ -18,7 +18,6 @@
 		E30A408521C2F9F9008B9B23 /* TripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E30A408421C2F9F9008B9B23 /* TripsViewController.storyboard */; };
 		E30A408721C2FA0D008B9B23 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30A408621C2FA0D008B9B23 /* TripsViewController.swift */; };
 		E325513321C444AA00886466 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E325513221C444AA00886466 /* UIButtonExtensions.swift */; };
-		E325513621C4467F00886466 /* FloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E325513521C4467F00886466 /* FloatingActionButton.swift */; };
 		E325513821C446CF00886466 /* TripCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E325513721C446CF00886466 /* TripCardView.swift */; };
 		E3455A3C21C03F4E00E73127 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3455A3B21C03F4E00E73127 /* AppDelegate.swift */; };
 		E3455A4321C03F5000E73127 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3455A4221C03F5000E73127 /* Assets.xcassets */; };
@@ -27,8 +26,8 @@
 		E34B6F1021C67FC50098E8A3 /* AddTripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34B6F0F21C67FC50098E8A3 /* AddTripsViewController.storyboard */; };
 		E34B6F1321C6800E0098E8A3 /* AddTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B6F1221C6800E0098E8A3 /* AddTripsViewController.swift */; };
 		E34B6F1521C6878D0098E8A3 /* PopupTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B6F1421C6878D0098E8A3 /* PopupTitleLabel.swift */; };
-		E34B6F1721C6974A0098E8A3 /* PopupActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B6F1621C6974A0098E8A3 /* PopupActionButton.swift */; };
 		E34B6F1921C69AF40098E8A3 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B6F1821C69AF40098E8A3 /* PopupView.swift */; };
+		E34B6F1B21C69D6D0098E8A3 /* SimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B6F1A21C69D6D0098E8A3 /* SimpleButton.swift */; };
 		E3EEC0B221C66357005C3AD9 /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EEC0B121C66357005C3AD9 /* UILabelExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +43,6 @@
 		E30A408421C2F9F9008B9B23 /* TripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsViewController.storyboard; sourceTree = "<group>"; };
 		E30A408621C2FA0D008B9B23 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		E325513221C444AA00886466 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
-		E325513521C4467F00886466 /* FloatingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButton.swift; sourceTree = "<group>"; };
 		E325513721C446CF00886466 /* TripCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardView.swift; sourceTree = "<group>"; };
 		E3455A3821C03F4E00E73127 /* Itinerary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Itinerary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3455A3B21C03F4E00E73127 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,8 +53,8 @@
 		E34B6F0F21C67FC50098E8A3 /* AddTripsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddTripsViewController.storyboard; sourceTree = "<group>"; };
 		E34B6F1221C6800E0098E8A3 /* AddTripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripsViewController.swift; sourceTree = "<group>"; };
 		E34B6F1421C6878D0098E8A3 /* PopupTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupTitleLabel.swift; sourceTree = "<group>"; };
-		E34B6F1621C6974A0098E8A3 /* PopupActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupActionButton.swift; sourceTree = "<group>"; };
 		E34B6F1821C69AF40098E8A3 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		E34B6F1A21C69D6D0098E8A3 /* SimpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleButton.swift; sourceTree = "<group>"; };
 		E3EEC0B121C66357005C3AD9 /* UILabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,12 +129,11 @@
 		E325513421C4465300886466 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				E325513521C4467F00886466 /* FloatingActionButton.swift */,
 				E325513721C446CF00886466 /* TripCardView.swift */,
 				E34B6F0D21C67E680098E8A3 /* TitleLabel.swift */,
 				E34B6F1421C6878D0098E8A3 /* PopupTitleLabel.swift */,
-				E34B6F1621C6974A0098E8A3 /* PopupActionButton.swift */,
 				E34B6F1821C69AF40098E8A3 /* PopupView.swift */,
+				E34B6F1A21C69D6D0098E8A3 /* SimpleButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -256,10 +253,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E34B6F1721C6974A0098E8A3 /* PopupActionButton.swift in Sources */,
 				3BBD583721C3DEA000F951F5 /* TripsTableViewCell.swift in Sources */,
 				3BBD583D21C3EA6A00F951F5 /* Theme.swift in Sources */,
 				3BBD583A21C3E8DB00F951F5 /* UIViewExtensions.swift in Sources */,
+				E34B6F1B21C69D6D0098E8A3 /* SimpleButton.swift in Sources */,
 				E34B6F1521C6878D0098E8A3 /* PopupTitleLabel.swift in Sources */,
 				E34B6F0E21C67E680098E8A3 /* TitleLabel.swift in Sources */,
 				E325513821C446CF00886466 /* TripCardView.swift in Sources */,
@@ -270,7 +267,6 @@
 				3BAA735A21C2A12F00BD680A /* TripFunctions.swift in Sources */,
 				E325513321C444AA00886466 /* UIButtonExtensions.swift in Sources */,
 				E3EEC0B221C66357005C3AD9 /* UILabelExtensions.swift in Sources */,
-				E325513621C4467F00886466 /* FloatingActionButton.swift in Sources */,
 				3BAA735C21C2A1E800BD680A /* Data.swift in Sources */,
 				E30A408721C2FA0D008B9B23 /* TripsViewController.swift in Sources */,
 			);
