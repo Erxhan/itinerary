@@ -21,7 +21,24 @@ class AddTripsViewController: UIViewController {
     }
     
     @IBAction func save(_ sender: SimpleButton) {
-        TripFunctions.createTrip(tripModel: TripModel(title: textField.text!))
+        
+        textField.rightViewMode = .never
+        
+        guard textField.text != "", let newTripName = textField.text else {
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: textField.frame.size.height - 10))
+            //imageView.image = UIImage(named: "warning")
+            imageView.image = #imageLiteral(resourceName: "warning")
+            imageView.contentMode = .scaleAspectFit
+            textField.rightView = imageView
+            textField.rightViewMode = .always
+            textField.layer.borderColor = #colorLiteral(red: 1, green: 0.4932718873, blue: 0.4739984274, alpha: 1)
+            textField.layer.borderWidth = 1
+            textField.layer.cornerRadius = 5
+            textField.placeholder = "Trip name is required"
+            return
+        }
+        
+        TripFunctions.createTrip(tripModel: TripModel(title: newTripName))
         guard let doneSaving = doneSaving else { return }
         doneSaving()
         dismiss(animated: true)
