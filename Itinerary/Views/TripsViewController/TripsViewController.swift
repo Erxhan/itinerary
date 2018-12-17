@@ -16,9 +16,9 @@ class TripsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.separatorColor = UIColor.clear
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.separatorColor = UIColor.clear
         
         // Weak is to avoid the strong reference to the class (hog memory)
         TripFunctions.readTrips { [weak self] in

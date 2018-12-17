@@ -28,14 +28,13 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g4H-F5-kqe" id="OC4-2S-2Qd">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.666666666666671"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1CO-cy-4Cn" customClass="TripCardView" customModule="Itinerary" customModuleProvider="target">
-                                                    <rect key="frame" x="15" y="24" width="345" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1CO-cy-4Cn" customClass="TripCardView" customModule="Itinerary" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="11" width="345" height="78"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miX-Xe-1Zd" customClass="TitleLabel" customModule="Itinerary" customModuleProvider="target">
-                                                            <rect key="frame" x="8" y="8" width="329" height="34"/>
+                                                            <rect key="frame" x="7" y="7" width="329" height="63"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                             <nil key="textColor"/>
@@ -45,6 +44,12 @@
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="1CO-cy-4Cn" firstAttribute="leading" secondItem="OC4-2S-2Qd" secondAttribute="leading" constant="15" id="OcJ-Jt-a5Q"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="1CO-cy-4Cn" secondAttribute="bottom" id="a3X-vx-io2"/>
+                                                <constraint firstAttribute="trailing" secondItem="1CO-cy-4Cn" secondAttribute="trailing" constant="15" id="gyR-V6-1UV"/>
+                                                <constraint firstItem="1CO-cy-4Cn" firstAttribute="top" secondItem="OC4-2S-2Qd" secondAttribute="topMargin" id="mRh-IL-0lW"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="titleLabel" destination="miX-Xe-1Zd" id="Hka-p1-wOh"/>
