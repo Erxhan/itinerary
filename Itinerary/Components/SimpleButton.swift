@@ -19,6 +19,8 @@ class SimpleButton: UIButton {
         layer.shadowRadius = 3
         layer.shadowOffset = CGSize(width: 0, height: 3)
         setTitleColor(UIColor.white, for: .normal)
+        self.heightAnchor.constraint(greaterThanOrEqualToConstant: 50).isActive = true
+        self.widthAnchor.constraint(greaterThanOrEqualToConstant: 60).isActive = true
     }
 
 }
