@@ -18,6 +18,12 @@ class TripFunctions {
             if Data.tripModels.count == 0 {
                 Data.tripModels.append(TripModel(title: "Trip to New York!"))
                 Data.tripModels.append(TripModel(title: "Trip to Japan!"))
+                Data.tripModels.append(TripModel(title: "Trip to Istanbul!"))
+                Data.tripModels.append(TripModel(title: "Trip to Dubai!"))
+                Data.tripModels.append(TripModel(title: "Trip to Rio De Janeiro!"))
+                Data.tripModels.append(TripModel(title: "Trip to Quebec!"))
+                Data.tripModels.append(TripModel(title: "Trip to Bruxelles!"))
+                Data.tripModels.append(TripModel(title: "Trip to Skopje!"))
             }
         }
         

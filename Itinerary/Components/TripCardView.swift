@@ -13,7 +13,8 @@ class TripCardView: UIView {
     override func draw(_ rect: CGRect) {
         layer.cornerRadius = 10
         layer.masksToBounds = true
-        layer.backgroundColor = Theme.tintColor?.cgColor
+        layer.backgroundColor = UIColor.white.cgColor
+        self.setShadow()
     }
     
 }

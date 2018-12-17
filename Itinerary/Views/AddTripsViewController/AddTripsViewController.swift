@@ -9,22 +9,20 @@
 import UIKit
 
 class AddTripsViewController: UIViewController {
-
+    
     @IBOutlet weak var titleLabel: PopupTitleLabel!
     @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var cancelButton: SimpleButton!
-    @IBOutlet weak var saveButton: SimpleButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
-    @IBAction func cancel(_ sender: UIButton) {
+    @IBAction func save(_ sender: SimpleButton) {
         dismiss(animated: true)
     }
     
-    @IBAction func save(_ sender: UIButton) {
+    @IBAction func cancel(_ sender: SimpleButton) {
         dismiss(animated: true)
     }
 }

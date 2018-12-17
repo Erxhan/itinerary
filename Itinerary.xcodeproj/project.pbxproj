@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B7AFB5721C7E8AC00C5E13F /* AddTripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7AFB5621C7E8AC00C5E13F /* AddTripsViewController.storyboard */; };
 		3BAA735821C2A12800BD680A /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA735721C2A12800BD680A /* TripModel.swift */; };
 		3BAA735A21C2A12F00BD680A /* TripFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA735921C2A12F00BD680A /* TripFunctions.swift */; };
 		3BAA735C21C2A1E800BD680A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA735B21C2A1E800BD680A /* Data.swift */; };
@@ -23,7 +24,6 @@
 		E3455A4321C03F5000E73127 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3455A4221C03F5000E73127 /* Assets.xcassets */; };
 		E3455A4621C03F5000E73127 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3455A4421C03F5000E73127 /* LaunchScreen.storyboard */; };
 		E34B6F0E21C67E680098E8A3 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B6F0D21C67E680098E8A3 /* TitleLabel.swift */; };
-		E34B6F1021C67FC50098E8A3 /* AddTripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34B6F0F21C67FC50098E8A3 /* AddTripsViewController.storyboard */; };
 		E34B6F1321C6800E0098E8A3 /* AddTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B6F1221C6800E0098E8A3 /* AddTripsViewController.swift */; };
 		E34B6F1521C6878D0098E8A3 /* PopupTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B6F1421C6878D0098E8A3 /* PopupTitleLabel.swift */; };
 		E34B6F1921C69AF40098E8A3 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B6F1821C69AF40098E8A3 /* PopupView.swift */; };
@@ -32,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B7AFB5621C7E8AC00C5E13F /* AddTripsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddTripsViewController.storyboard; sourceTree = "<group>"; };
 		3BAA735721C2A12800BD680A /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
 		3BAA735921C2A12F00BD680A /* TripFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFunctions.swift; sourceTree = "<group>"; };
 		3BAA735B21C2A1E800BD680A /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -50,7 +51,6 @@
 		E3455A4521C03F5000E73127 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3455A4721C03F5000E73127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E34B6F0D21C67E680098E8A3 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
-		E34B6F0F21C67FC50098E8A3 /* AddTripsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddTripsViewController.storyboard; sourceTree = "<group>"; };
 		E34B6F1221C6800E0098E8A3 /* AddTripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripsViewController.swift; sourceTree = "<group>"; };
 		E34B6F1421C6878D0098E8A3 /* PopupTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupTitleLabel.swift; sourceTree = "<group>"; };
 		E34B6F1821C69AF40098E8A3 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 		E34B6F1121C67FF20098E8A3 /* AddTripsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E34B6F0F21C67FC50098E8A3 /* AddTripsViewController.storyboard */,
+				3B7AFB5621C7E8AC00C5E13F /* AddTripsViewController.storyboard */,
 				E34B6F1221C6800E0098E8A3 /* AddTripsViewController.swift */,
 			);
 			path = AddTripsViewController;
@@ -239,7 +239,7 @@
 			files = (
 				3BBD584121C3EDAB00F951F5 /* Colors.xcassets in Resources */,
 				E3455A4621C03F5000E73127 /* LaunchScreen.storyboard in Resources */,
-				E34B6F1021C67FC50098E8A3 /* AddTripsViewController.storyboard in Resources */,
+				3B7AFB5721C7E8AC00C5E13F /* AddTripsViewController.storyboard in Resources */,
 				E30A408521C2F9F9008B9B23 /* TripsViewController.storyboard in Resources */,
 				3BBD583F21C3EBE000F951F5 /* Nunito-Regular.ttf in Resources */,
 				E3455A4321C03F5000E73127 /* Assets.xcassets in Resources */,

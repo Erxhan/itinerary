@@ -16,6 +16,7 @@ class TripsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.separatorColor = UIColor.clear
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -41,7 +42,7 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 100
     }
 
 }

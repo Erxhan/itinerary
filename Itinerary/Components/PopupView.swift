@@ -14,7 +14,7 @@ class PopupView: UIView {
         super.init(coder: aDecoder)!
         layer.cornerRadius = 10
         layer.masksToBounds = true
-        backgroundColor = Theme.backgroundColor
+        backgroundColor = UIColor.white
     }
 
 }

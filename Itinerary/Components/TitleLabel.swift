@@ -12,9 +12,9 @@ class TitleLabel: UILabel {
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
-        self.font = UIFont(name: Theme.mainFontName, size: 32)
+        self.font = UIFont(name: Theme.mainFontName, size: 20)
         self.textColor = Theme.tintColor
-        self.textAlignment = .center
+        //self.textAlignment = .center
     }
     
 }
