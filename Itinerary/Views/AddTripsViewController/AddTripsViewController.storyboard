@@ -36,9 +36,8 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0R-Tc-ooi" customClass="SimpleButton" customModule="Itinerary" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="148" width="50" height="44"/>
+                                        <rect key="frame" x="8" y="148" width="48" height="44"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="9bk-1i-avu"/>
                                             <constraint firstAttribute="height" constant="44" id="wBN-Cc-M71"/>
                                         </constraints>
                                         <state key="normal" title="Cancel"/>
@@ -47,10 +46,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLN-Ss-CvN" customClass="SimpleButton" customModule="Itinerary" customModuleProvider="target">
-                                        <rect key="frame" x="285" y="148" width="50" height="44"/>
+                                        <rect key="frame" x="301" y="148" width="34" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="2Et-Oi-Avo"/>
-                                            <constraint firstAttribute="width" constant="50" id="MPU-kH-EFN"/>
                                         </constraints>
                                         <state key="normal" title="Save"/>
                                         <connections>
