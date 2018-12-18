@@ -9,18 +9,64 @@
 import UIKit
 
 class SimpleButton: UIButton {
+    
+    var corners : [CACornerMask] = []
+    
+    @IBInspectable var topLeftCorner: Bool {
+        get {
+            return self.layer.maskedCorners.contains(.layerMinXMinYCorner)
+        }
+        set {
+            corners.append(.layerMinXMinYCorner)
+            self.layer.maskedCorners = corners
+        }
+    }
+    
+    @IBInspectable var topRightCorner: Bool {
+        get {
+            return self.layer.maskedCorners.contains(.layerMaxXMinYCorner)
+        }
+        set {
+            corners.append(.layerMaxXMinYCorner)
+            self.layer.maskedCorners = corners
+        }
+    }
+    
+    @IBInspectable var bottomLeftCorner: Bool {
+        get {
+            return self.layer.maskedCorners.contains(.layerMinXMaxYCorner)
+        }
+        set {
+            corners.append(.layerMinXMaxYCorner)
+            self.layer.maskedCorners = corners
+        }
+    }
+    
+    @IBInspectable var bottomRightCorner: Bool {
+        get {
+            return self.layer.maskedCorners.contains(.layerMaxXMaxYCorner)
+        }
+        set {
+            corners.append(.layerMaxXMaxYCorner)
+            self.layer.maskedCorners = corners
+        }
+    }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
-        
+        setup()
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        setup()
+    }
+    
+    func setup() {
         backgroundColor = Theme.tintColor
-        layer.cornerRadius = 10
-        layer.shadowOpacity = 0.3
-        layer.shadowRadius = 3
-        layer.shadowOffset = CGSize(width: 0, height: 3)
         setTitleColor(UIColor.white, for: .normal)
-        self.heightAnchor.constraint(greaterThanOrEqualToConstant: 50).isActive = true
-        self.widthAnchor.constraint(greaterThanOrEqualToConstant: 60).isActive = true
+        self.contentHorizontalAlignment = .center
+        self.layer.cornerRadius = 10
+        //self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
 
 }
