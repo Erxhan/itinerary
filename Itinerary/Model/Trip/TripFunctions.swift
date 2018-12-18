@@ -10,28 +10,19 @@ import Foundation
 
 class TripFunctions {
     static func createTrip(tripModel: TripModel) {
-        
+        Data.tripModels.append(tripModel)
     }
     
     static func readTrips(completion: @escaping () -> ()) {
         DispatchQueue.global(qos: .userInteractive).async {
             if Data.tripModels.count == 0 {
-                Data.tripModels.append(TripModel(title: "Trip to New York!"))
+                Data.tripModels.append(TripModel(title: "Trip to Belgium!"))
                 Data.tripModels.append(TripModel(title: "Trip to Japan!"))
-                Data.tripModels.append(TripModel(title: "Trip to Istanbul!"))
+                Data.tripModels.append(TripModel(title: "Trip to Usa!"))
+                Data.tripModels.append(TripModel(title: "Trip to Makedonia!"))
+                Data.tripModels.append(TripModel(title: "Trip to Turkey!"))
                 Data.tripModels.append(TripModel(title: "Trip to Dubai!"))
-                Data.tripModels.append(TripModel(title: "Trip to Rio De Janeiro!"))
-                Data.tripModels.append(TripModel(title: "Trip to Quebec!"))
-                Data.tripModels.append(TripModel(title: "Trip to Bruxelles!"))
-                Data.tripModels.append(TripModel(title: "Trip to Skopje!"))
-                Data.tripModels.append(TripModel(title: "Trip to New York!"))
-                Data.tripModels.append(TripModel(title: "Trip to Japan!"))
-                Data.tripModels.append(TripModel(title: "Trip to Istanbul!"))
-                Data.tripModels.append(TripModel(title: "Trip to Dubai!"))
-                Data.tripModels.append(TripModel(title: "Trip to Rio De Janeiro!"))
-                Data.tripModels.append(TripModel(title: "Trip to Quebec!"))
-                Data.tripModels.append(TripModel(title: "Trip to Bruxelles!"))
-                Data.tripModels.append(TripModel(title: "Trip to Skopje!"))
+                Data.tripModels.append(TripModel(title: "Trip to Brasil!"))
             }
         }
         
