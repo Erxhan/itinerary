@@ -8,50 +8,14 @@
 
 import UIKit
 
-class SimpleButton: UIButton {
+@IBDesignable class SimpleButton: UIButton {
     
-    var corners : [CACornerMask] = []
-    
-    @IBInspectable var topLeftCorner: Bool {
-        get {
-            return self.layer.maskedCorners.contains(.layerMinXMinYCorner)
-        }
-        set {
-            corners.append(.layerMinXMinYCorner)
-            self.layer.maskedCorners = corners
+    @IBInspectable var cornerRadius: CGFloat = 1 {
+        didSet {
+            refreshCorners(value: cornerRadius)
         }
     }
     
-    @IBInspectable var topRightCorner: Bool {
-        get {
-            return self.layer.maskedCorners.contains(.layerMaxXMinYCorner)
-        }
-        set {
-            corners.append(.layerMaxXMinYCorner)
-            self.layer.maskedCorners = corners
-        }
-    }
-    
-    @IBInspectable var bottomLeftCorner: Bool {
-        get {
-            return self.layer.maskedCorners.contains(.layerMinXMaxYCorner)
-        }
-        set {
-            corners.append(.layerMinXMaxYCorner)
-            self.layer.maskedCorners = corners
-        }
-    }
-    
-    @IBInspectable var bottomRightCorner: Bool {
-        get {
-            return self.layer.maskedCorners.contains(.layerMaxXMaxYCorner)
-        }
-        set {
-            corners.append(.layerMaxXMaxYCorner)
-            self.layer.maskedCorners = corners
-        }
-    }
-
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         setup()
@@ -65,8 +29,11 @@ class SimpleButton: UIButton {
         backgroundColor = Theme.tintColor
         setTitleColor(UIColor.white, for: .normal)
         self.contentHorizontalAlignment = .center
-        self.layer.cornerRadius = 10
-        //self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        refreshCorners(value: cornerRadius)
     }
-
+    
+    func refreshCorners(value: CGFloat) {
+        self.layer.cornerRadius = value
+    }
+    
 }
