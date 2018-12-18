@@ -35,19 +35,19 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="giE-5H-i93">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="giE-5H-i93">
                                         <rect key="frame" x="0.0" y="170" width="343" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0R-Tc-ooi" customClass="SimpleButton" customModule="Itinerary" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="171" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="171.5" height="30"/>
                                                 <state key="normal" title="Cancel"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftCorner" value="NO"/>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="topRightCorner" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="topRightCorner" value="YES"/>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeftCorner" value="NO"/>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRightCorner" value="NO"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -55,7 +55,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLN-Ss-CvN" customClass="SimpleButton" customModule="Itinerary" customModuleProvider="target">
-                                                <rect key="frame" x="172" y="0.0" width="171" height="30"/>
+                                                <rect key="frame" x="171.5" y="0.0" width="171.5" height="30"/>
                                                 <state key="normal" title="Save"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftCorner" value="YES"/>
@@ -63,7 +63,7 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeftCorner" value="NO"/>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRightCorner" value="NO"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="2"/>
+                                                        <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>

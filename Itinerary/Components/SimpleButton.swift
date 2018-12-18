@@ -8,13 +8,54 @@
 
 import UIKit
 
-@IBDesignable class SimpleButton: UIButton {
+class SimpleButton: UIButton {
     
     @IBInspectable var cornerRadius: CGFloat = 1 {
         didSet {
-            refreshCorners(value: cornerRadius)
+            layer.cornerRadius = cornerRadius
         }
     }
+    
+    @IBInspectable var topLeftCorner: Bool = true {
+        didSet {
+            if topLeftCorner {
+                layer.maskedCorners.insert(.layerMinXMinYCorner)
+            } else {
+                layer.maskedCorners.remove(.layerMinXMinYCorner)
+            }
+        }
+    }
+    
+    @IBInspectable var topRightCorner: Bool = true {
+        didSet {
+            if topRightCorner {
+                layer.maskedCorners.insert(.layerMaxXMinYCorner)
+            } else {
+                layer.maskedCorners.remove(.layerMaxXMinYCorner)
+            }
+        }
+    }
+    
+    @IBInspectable var bottomLeftCorner: Bool = true {
+        didSet {
+            if bottomLeftCorner {
+                layer.maskedCorners.insert(.layerMinXMaxYCorner)
+            } else {
+                layer.maskedCorners.remove(.layerMinXMaxYCorner)
+            }
+        }
+    }
+    
+    @IBInspectable var bottomRightCorner: Bool = true {
+        didSet {
+            if bottomRightCorner {
+                layer.maskedCorners.insert(.layerMaxXMaxYCorner)
+            } else {
+                layer.maskedCorners.remove(.layerMaxXMaxYCorner)
+            }
+        }
+    }
+
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -28,12 +69,9 @@ import UIKit
     func setup() {
         backgroundColor = Theme.tintColor
         setTitleColor(UIColor.white, for: .normal)
-        self.contentHorizontalAlignment = .center
-        refreshCorners(value: cornerRadius)
-    }
-    
-    func refreshCorners(value: CGFloat) {
-        self.layer.cornerRadius = value
+        contentHorizontalAlignment = .center
+        layer.cornerRadius = cornerRadius
+        addBorder(side: .Top, color: UIColor.black, width: 2)
     }
     
 }
