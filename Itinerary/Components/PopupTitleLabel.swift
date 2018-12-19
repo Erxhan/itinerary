@@ -14,7 +14,6 @@ class PopupTitleLabel: UILabel {
         super.init(coder: aDecoder)!
         self.font = UIFont(name: Theme.mainFontName, size: 22)
         self.textColor = Theme.tintColor
-        self.textAlignment = .center
     }
 
 }
