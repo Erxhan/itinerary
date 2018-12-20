@@ -14,7 +14,7 @@ class TitleLabel: UILabel {
         super.init(coder: aDecoder)!
         self.font = UIFont(name: Theme.mainFontName, size: 20)
         self.textColor = Theme.tintColor
-        //self.textAlignment = .center
+        self.textAlignment = .center
     }
     
 }

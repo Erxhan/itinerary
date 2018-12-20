@@ -11,12 +11,15 @@ import UIKit
 class TripsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: TitleLabel!
+    @IBOutlet weak var tripImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        tripImage.layer.cornerRadius = 10
     }
     
     func setup(tripModel: TripModel) {
         titleLabel.text = tripModel.title
+        tripImage.image = tripModel.image
     }
 }
