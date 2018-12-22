@@ -61,7 +61,7 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
         
        // let trip = Data.tripModels[indexPath.row]
         
-        let delete = UIContextualAction(style: .destructive, title: "Delete") { (contextualAction, view, actionPerformed: @escaping (Bool) -> Void) in
+        let delete = UIContextualAction(style: .destructive, title: "") { (contextualAction, view, actionPerformed: @escaping (Bool) -> Void) in
             
 //            let alert = UIAlertController(title: "Delete Trip", message: "Are you sure to delete \(trip.title) ?", preferredStyle: .alert)
 //            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (alertAction) in
@@ -79,18 +79,19 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
             actionPerformed(true)
             
         }
-        //delete.image = #imageLiteral(resourceName: "delete")
+        delete.image = UIImage(named: "delete")?.ResizeImage(targetSize: CGSize(width: 30, height: 30))
         return UISwipeActionsConfiguration(actions: [delete])
     }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let edit = UIContextualAction(style: .normal, title: "Edit") { (contextualAction, view, actionPerformed: (Bool) -> Void) in
+        let edit = UIContextualAction(style: .normal, title: "") { (contextualAction, view, actionPerformed: (Bool) -> Void) in
             self.tripIndexToEdit = indexPath.row
             self.performSegue(withIdentifier: "toAddTripSegue", sender: nil)
             actionPerformed(true)
         }
         edit.backgroundColor = Theme.editColor
+        edit.image = UIImage(named: "edit")?.ResizeImage(targetSize: CGSize(width: 30, height: 30))
         return UISwipeActionsConfiguration(actions: [edit])
     }
 
