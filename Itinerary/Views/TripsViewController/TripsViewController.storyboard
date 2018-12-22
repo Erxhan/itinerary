@@ -35,8 +35,9 @@
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4ve-QM-WXN">
                                                             <rect key="frame" x="0.0" y="0.0" width="345" height="78"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miX-Xe-1Zd" customClass="TitleLabel" customModule="Itinerary" customModuleProvider="target">
-                                                            <rect key="frame" x="55" y="0.0" width="235" height="78"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miX-Xe-1Zd" customClass="TitleLabel" customModule="Itinerary" customModuleProvider="target">
+                                                            <rect key="frame" x="55" y="0.0" width="235" height="38.333333333333336"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -45,12 +46,8 @@
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="4ve-QM-WXN" secondAttribute="bottom" id="3gF-Lm-875"/>
                                                         <constraint firstItem="4ve-QM-WXN" firstAttribute="top" secondItem="1CO-cy-4Cn" secondAttribute="top" id="AC0-9J-PWl"/>
-                                                        <constraint firstAttribute="bottom" secondItem="miX-Xe-1Zd" secondAttribute="bottom" id="Suw-3A-Oqd"/>
                                                         <constraint firstAttribute="trailing" secondItem="4ve-QM-WXN" secondAttribute="trailing" id="Szt-E5-ETb"/>
                                                         <constraint firstItem="4ve-QM-WXN" firstAttribute="leading" secondItem="1CO-cy-4Cn" secondAttribute="leading" id="exi-5r-Gn0"/>
-                                                        <constraint firstItem="miX-Xe-1Zd" firstAttribute="leading" secondItem="1CO-cy-4Cn" secondAttribute="leading" id="lsr-KH-zoi"/>
-                                                        <constraint firstAttribute="trailing" secondItem="miX-Xe-1Zd" secondAttribute="trailing" id="mDZ-iK-Ien"/>
-                                                        <constraint firstItem="miX-Xe-1Zd" firstAttribute="top" secondItem="1CO-cy-4Cn" secondAttribute="top" id="moL-p4-fG9"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -64,7 +61,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="titleLabel" destination="miX-Xe-1Zd" id="Hka-p1-wOh"/>
-                                            <outlet property="tripImage" destination="4ve-QM-WXN" id="bYi-F1-OOO"/>
+                                            <outlet property="tripImageView" destination="4ve-QM-WXN" id="bYi-F1-OOO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

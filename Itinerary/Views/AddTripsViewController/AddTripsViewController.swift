@@ -16,21 +16,28 @@ class AddTripsViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     var doneSaving: (() -> ())?
+    var tripIndexToEdit: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.layer.cornerRadius = 10
         imageView.layer.opacity = 0.4
-
+        
+        if let index = tripIndexToEdit {
+            let trip = Data.tripModels[index]
+            textField.text = trip.title
+            imageView.image = trip.image
+        }
+        
     }
     
     @IBAction func save(_ sender: SimpleButton) {
         
         textField.rightViewMode = .never
         
+        // Setup textField validation
         guard textField.text != "", let newTripName = textField.text else {
             let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: textField.frame.size.height - 10))
-            //imageView.image = UIImage(named: "warning")
             imageView.image = #imageLiteral(resourceName: "warning")
             imageView.contentMode = .scaleAspectFit
             textField.rightView = imageView
@@ -42,7 +49,12 @@ class AddTripsViewController: UIViewController {
             return
         }
         
-        TripFunctions.createTrip(tripModel: TripModel(title: newTripName, image: imageView.image))
+        if let index = tripIndexToEdit {
+            TripFunctions.updateTrip(at: index, title: newTripName, image: imageView.image)
+        } else {
+            TripFunctions.createTrip(tripModel: TripModel(title: newTripName, image: imageView.image))
+        }
+        
         guard let doneSaving = doneSaving else { return }
         doneSaving()
         dismiss(animated: true)
@@ -60,33 +72,31 @@ class AddTripsViewController: UIViewController {
     }
     
     @IBAction func addPhoto(_ sender: UIButton) {
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-            PHPhotoLibrary.requestAuthorization { (status) in
-                switch status {
-                case .authorized:
+        PHPhotoLibrary.requestAuthorization { (status) in
+            switch status {
+            case .authorized:
+                self.presentPhotoPickerController()
+            case .notDetermined:
+                if status == PHAuthorizationStatus.authorized {
                     self.presentPhotoPickerController()
-                case .notDetermined:
-                    if status == PHAuthorizationStatus.authorized {
-                        self.presentPhotoPickerController()
-                    }
-                case .restricted:
-                    let alert = UIAlertController(title: "Photo Library Restricted", message: "Photo Library access is restricted in your settings", preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "OK", style: .default)
-                    alert.addAction(okAction)
-                    self.present(alert, animated: true)
-                case .denied:
-                    let alert = UIAlertController(title: "Photo Library Denied", message: "Photo Library access is denied", preferredStyle: .alert)
-                    let settingsAction = UIAlertAction(title: "Go to Settings", style: .default) { (action) in
-                        DispatchQueue.main.async {
-                            let url = URL(string: UIApplication.openSettingsURLString)!
-                            UIApplication.shared.open(url, options: [:])
-                        }
-                    }
-                    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-                    alert.addAction(settingsAction)
-                    alert.addAction(cancelAction)
-                    self.present(alert, animated: true)
                 }
+            case .restricted:
+                let alert = UIAlertController(title: "Photo Library Restricted", message: "Photo Library access is restricted in your settings", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default)
+                alert.addAction(okAction)
+                self.present(alert, animated: true)
+            case .denied:
+                let alert = UIAlertController(title: "Photo Library Denied", message: "Photo Library access is denied", preferredStyle: .alert)
+                let settingsAction = UIAlertAction(title: "Go to Settings", style: .default) { (action) in
+                    DispatchQueue.main.async {
+                        let url = URL(string: UIApplication.openSettingsURLString)!
+                        UIApplication.shared.open(url, options: [:])
+                    }
+                }
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+                alert.addAction(settingsAction)
+                alert.addAction(cancelAction)
+                self.present(alert, animated: true)
             }
         }
     }
