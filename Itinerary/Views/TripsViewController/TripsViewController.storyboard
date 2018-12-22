@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,28 +27,44 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g4H-F5-kqe" id="OC4-2S-2Qd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1CO-cy-4Cn" customClass="TripCardView" customModule="Itinerary" customModuleProvider="target">
                                                     <rect key="frame" x="15" y="11" width="345" height="78"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4ve-QM-WXN">
-                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="78"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4ve-QM-WXN" customClass="TripImageView" customModule="Itinerary" customModuleProvider="target">
+                                                            <rect key="frame" x="245" y="0.0" width="100" height="78"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="78" id="djs-z6-LFP"/>
+                                                                <constraint firstAttribute="width" constant="100" id="m5K-q1-7cr"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftCorner" value="NO"/>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="topRightCorner" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeftCorner" value="NO"/>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRightCorner" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miX-Xe-1Zd" customClass="TitleLabel" customModule="Itinerary" customModuleProvider="target">
-                                                            <rect key="frame" x="55" y="0.0" width="235" height="38"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miX-Xe-1Zd" customClass="TitleLabel" customModule="Itinerary" customModuleProvider="target">
+                                                            <rect key="frame" x="10" y="0.0" width="235" height="78"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="4ve-QM-WXN" secondAttribute="bottom" id="3gF-Lm-875"/>
-                                                        <constraint firstItem="4ve-QM-WXN" firstAttribute="top" secondItem="1CO-cy-4Cn" secondAttribute="top" id="AC0-9J-PWl"/>
-                                                        <constraint firstAttribute="trailing" secondItem="4ve-QM-WXN" secondAttribute="trailing" id="Szt-E5-ETb"/>
-                                                        <constraint firstItem="4ve-QM-WXN" firstAttribute="leading" secondItem="1CO-cy-4Cn" secondAttribute="leading" id="exi-5r-Gn0"/>
+                                                        <constraint firstItem="4ve-QM-WXN" firstAttribute="top" secondItem="1CO-cy-4Cn" secondAttribute="top" id="9NY-1b-ahB"/>
+                                                        <constraint firstItem="4ve-QM-WXN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="miX-Xe-1Zd" secondAttribute="trailing" id="IZB-Sc-6Hi"/>
+                                                        <constraint firstItem="miX-Xe-1Zd" firstAttribute="leading" secondItem="1CO-cy-4Cn" secondAttribute="leading" constant="10" id="UM4-lg-3BR"/>
+                                                        <constraint firstAttribute="trailing" secondItem="4ve-QM-WXN" secondAttribute="trailing" id="XHM-Mh-flE"/>
+                                                        <constraint firstAttribute="bottom" secondItem="miX-Xe-1Zd" secondAttribute="bottom" id="fh7-OC-5GO"/>
+                                                        <constraint firstAttribute="bottom" secondItem="4ve-QM-WXN" secondAttribute="bottom" id="gH6-k4-5O2"/>
+                                                        <constraint firstItem="miX-Xe-1Zd" firstAttribute="top" secondItem="1CO-cy-4Cn" secondAttribute="top" id="nxP-ND-wCO"/>
+                                                        <constraint firstItem="4ve-QM-WXN" firstAttribute="leading" secondItem="miX-Xe-1Zd" secondAttribute="trailing" id="xmr-L8-jp7"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -91,10 +108,63 @@
                     </view>
                     <connections>
                         <outlet property="addButton" destination="JsI-90-3YC" id="v6D-cQ-Zix"/>
+                        <outlet property="helpView" destination="m7W-YI-T9g" id="RpT-Nd-gOq"/>
                         <outlet property="tableView" destination="acn-Iz-wSL" id="izX-ws-eFY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lee-LR-u1X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" id="m7W-YI-T9g">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="P81-CH-Lu5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fri-nj-F14" customClass="AddButton" customModule="Itinerary" customModuleProvider="target">
+                                <rect key="frame" x="18" y="698" width="339" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="CuG-4D-Hab"/>
+                                </constraints>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeHelpView:" destination="sKW-Um-nyV" eventType="touchUpInside" id="40h-JJ-tHS"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gmn-p5-VWT">
+                                <rect key="frame" x="18" y="70.000000000000028" width="339" height="387.66666666666674"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe rows for more features!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcQ-IY-VRr">
+                                        <rect key="frame" x="0.0" y="0.0" width="339" height="71.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="editscreen" translatesAutoresizingMaskIntoConstraints="NO" id="wOa-ak-tJJ">
+                                        <rect key="frame" x="0.0" y="79.666666666666657" width="339" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="gnn-Bn-sdj"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deletescreen" translatesAutoresizingMaskIntoConstraints="NO" id="v4G-vQ-0Ug">
+                                        <rect key="frame" x="0.0" y="237.66666666666669" width="339" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="Dk1-pI-Tf9"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="gmn-p5-VWT" firstAttribute="leading" secondItem="P81-CH-Lu5" secondAttribute="leading" constant="18" id="2YY-6C-isg"/>
+                            <constraint firstAttribute="trailing" secondItem="fri-nj-F14" secondAttribute="trailing" constant="18" id="KdR-Cy-vDa"/>
+                            <constraint firstAttribute="bottom" secondItem="fri-nj-F14" secondAttribute="bottom" constant="70" id="OqD-nm-L3H"/>
+                            <constraint firstItem="gmn-p5-VWT" firstAttribute="top" secondItem="P81-CH-Lu5" secondAttribute="top" constant="70" id="ih8-yi-SEq"/>
+                            <constraint firstItem="fri-nj-F14" firstAttribute="leading" secondItem="P81-CH-Lu5" secondAttribute="leading" constant="18" id="oKY-mH-jN2"/>
+                            <constraint firstAttribute="trailing" secondItem="gmn-p5-VWT" secondAttribute="trailing" constant="18" id="pzr-Iz-hwF"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
             </objects>
             <point key="canvasLocation" x="69.599999999999994" y="-333.99014778325125"/>
         </scene>
@@ -109,5 +179,7 @@
     </scenes>
     <resources>
         <image name="AddButton" width="20" height="20"/>
+        <image name="deletescreen" width="327" height="90"/>
+        <image name="editscreen" width="333" height="92"/>
     </resources>
 </document>

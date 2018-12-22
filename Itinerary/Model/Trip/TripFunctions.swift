@@ -15,6 +15,7 @@ class TripFunctions {
     
     static func readTrips(completion: @escaping () -> ()) {
         DispatchQueue.global(qos: .userInteractive).async {
+            // MOCK DATA
             if Data.tripModels.count == 0 {
                 Data.tripModels.append(TripModel(title: "Trip to Belgium!"))
                 Data.tripModels.append(TripModel(title: "Trip to Japan!"))

@@ -12,8 +12,10 @@ class TripsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: AddButton!
+    @IBOutlet var helpView: UIVisualEffectView!
     
     var tripIndexToEdit: Int?
+    var seenTripHelp = "seenTripHelp"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +25,25 @@ class TripsViewController: UIViewController {
         tableView.separatorColor = UIColor.clear
         
         // Weak is to avoid the strong reference to the class (hog memory)
-        TripFunctions.readTrips { [weak self] in
-            self?.tableView.reloadData()
+        TripFunctions.readTrips { [unowned self] in
+            self.tableView.reloadData()
+            
+            if Data.tripModels.count > 0 {
+                if UserDefaults.standard.bool(forKey: self.seenTripHelp) == false {
+                    self.view.addSubview(self.helpView)
+                    self.helpView.frame = self.view.frame
+                }
+            }
+        }
+        
+    }
+    
+    @IBAction func closeHelpView(_ sender: AddButton) {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.helpView.alpha = 0
+        }) { (success) in
+            self.helpView.removeFromSuperview()
+            UserDefaults.standard.set(true, forKey: self.seenTripHelp)
         }
     }
     
@@ -35,6 +54,7 @@ class TripsViewController: UIViewController {
             popup.doneSaving = { [weak self] in
                 self?.tableView.reloadData()
             }
+            tripIndexToEdit = nil
         }
     }
 }
@@ -59,20 +79,20 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-       // let trip = Data.tripModels[indexPath.row]
+        // let trip = Data.tripModels[indexPath.row]
         
         let delete = UIContextualAction(style: .destructive, title: "") { (contextualAction, view, actionPerformed: @escaping (Bool) -> Void) in
             
-//            let alert = UIAlertController(title: "Delete Trip", message: "Are you sure to delete \(trip.title) ?", preferredStyle: .alert)
-//            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (alertAction) in
-//                actionPerformed(false)
-//            }))
-//            alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (alertAction) in
-//                TripFunctions.deleteTrip(index: indexPath.row)
-//                tableView.deleteRows(at: [indexPath], with: .left)
-//                actionPerformed(true)
-//            }))
-//            self.present(alert, animated: true)
+            //            let alert = UIAlertController(title: "Delete Trip", message: "Are you sure to delete \(trip.title) ?", preferredStyle: .alert)
+            //            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (alertAction) in
+            //                actionPerformed(false)
+            //            }))
+            //            alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (alertAction) in
+            //                TripFunctions.deleteTrip(index: indexPath.row)
+            //                tableView.deleteRows(at: [indexPath], with: .left)
+            //                actionPerformed(true)
+            //            }))
+            //            self.present(alert, animated: true)
             
             TripFunctions.deleteTrip(index: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .left)
@@ -94,5 +114,5 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
         edit.image = UIImage(named: "edit")?.ResizeImage(targetSize: CGSize(width: 30, height: 30))
         return UISwipeActionsConfiguration(actions: [edit])
     }
-
+    
 }
