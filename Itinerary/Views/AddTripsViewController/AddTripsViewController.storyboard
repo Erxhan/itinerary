@@ -26,20 +26,39 @@
                                         <rect key="frame" x="0.0" y="-1" width="343" height="200"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Trips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrr-lA-CD1" customClass="PopupTitleLabel" customModule="Itinerary" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="8" width="273" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nAh-ZB-jWf">
-                                        <rect key="frame" x="8" y="85" width="327" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Gyj-Vl-kOU">
+                                        <rect key="frame" x="18" y="18" width="307" height="106"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="k1f-tN-IHq">
+                                                <rect key="frame" x="0.0" y="0.0" width="307" height="26"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Trips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrr-lA-CD1" customClass="PopupTitleLabel" customModule="Itinerary" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="253" height="26"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adt-PJ-ueT">
+                                                        <rect key="frame" x="279" y="0.0" width="28" height="26"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="26" id="7WN-us-mnj"/>
+                                                            <constraint firstAttribute="width" constant="28" id="M4f-GJ-Kvc"/>
+                                                        </constraints>
+                                                        <state key="normal" image="photo-camera"/>
+                                                        <connections>
+                                                            <action selector="addPhoto:" destination="lfD-y4-oCA" eventType="touchUpInside" id="Q1G-dZ-9DK"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nAh-ZB-jWf">
+                                                <rect key="frame" x="-0.26120759599573018" y="74.915023114145868" width="306.87720930188686" height="30.030797240551621"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="giE-5H-i93">
                                         <rect key="frame" x="0.0" y="170" width="343" height="30"/>
                                         <subviews>
@@ -77,19 +96,14 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adt-PJ-ueT">
-                                        <rect key="frame" x="307" y="6" width="28" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="photo-camera"/>
-                                        <connections>
-                                            <action selector="addPhoto:" destination="lfD-y4-oCA" eventType="touchUpInside" id="Q1G-dZ-9DK"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" name="Tint"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="434-19-7zO"/>
+                                    <constraint firstItem="Gyj-Vl-kOU" firstAttribute="leading" secondItem="elW-ZF-azF" secondAttribute="leading" constant="18" id="7A2-Dl-IXh"/>
+                                    <constraint firstItem="Gyj-Vl-kOU" firstAttribute="top" secondItem="elW-ZF-azF" secondAttribute="top" constant="18" id="Ctj-Kd-1Pp"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gyj-Vl-kOU" secondAttribute="trailing" constant="18" id="Rtb-JL-FiU"/>
                                     <constraint firstAttribute="trailing" secondItem="giE-5H-i93" secondAttribute="trailing" id="cNE-o3-76U"/>
                                     <constraint firstAttribute="bottom" secondItem="giE-5H-i93" secondAttribute="bottom" id="rbN-yr-9wE"/>
                                     <constraint firstItem="giE-5H-i93" firstAttribute="leading" secondItem="elW-ZF-azF" secondAttribute="leading" id="tCl-Ru-NyX"/>
