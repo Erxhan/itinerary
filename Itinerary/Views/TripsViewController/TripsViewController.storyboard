@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sKW-Um-nyV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R4F-DT-XP5">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -27,7 +27,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g4H-F5-kqe" id="OC4-2S-2Qd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1CO-cy-4Cn" customClass="TripCardView" customModule="Itinerary" customModuleProvider="target">
@@ -106,6 +106,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="L84-jq-gQx"/>
                     </view>
+                    <navigationItem key="navigationItem" id="UEK-Lu-oKc"/>
                     <connections>
                         <outlet property="addButton" destination="JsI-90-3YC" id="v6D-cQ-Zix"/>
                         <outlet property="helpView" destination="m7W-YI-T9g" id="RpT-Nd-gOq"/>
@@ -166,7 +167,7 @@
                     <blurEffect style="dark"/>
                 </visualEffectView>
             </objects>
-            <point key="canvasLocation" x="69.599999999999994" y="-333.99014778325125"/>
+            <point key="canvasLocation" x="1012" y="-333.99014778325125"/>
         </scene>
         <!--AddTripsViewController-->
         <scene sceneID="Jnx-1k-UZ8">
@@ -174,7 +175,25 @@
                 <viewControllerPlaceholder storyboardName="AddTripsViewController" id="WXf-Zu-oPU" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OGU-0d-GiJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="839" y="-334"/>
+            <point key="canvasLocation" x="1780" y="-334.72906403940885"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FgG-Nb-hVi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R4F-DT-XP5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zc7-tf-wDp">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sKW-Um-nyV" kind="relationship" relationship="rootViewController" id="uDx-l0-Eif"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vKQ-wH-MFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69.599999999999994" y="-333.99014778325125"/>
         </scene>
     </scenes>
     <resources>

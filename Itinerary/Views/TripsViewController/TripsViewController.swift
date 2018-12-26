@@ -35,7 +35,6 @@ class TripsViewController: UIViewController {
                 }
             }
         }
-        
     }
     
     @IBAction func closeHelpView(_ sender: AddButton) {
@@ -113,6 +112,14 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
         edit.backgroundColor = Theme.editColor
         edit.image = UIImage(named: "edit")?.ResizeImage(targetSize: CGSize(width: 30, height: 30))
         return UISwipeActionsConfiguration(actions: [edit])
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: String(describing: ActivitiesViewController.self), bundle: nil)
+        let vc = storyboard.instantiateInitialViewController()
+        if let vc = vc {
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
 }

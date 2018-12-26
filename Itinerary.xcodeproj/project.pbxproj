@@ -31,6 +31,8 @@
 		E34B6F1921C69AF40098E8A3 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B6F1821C69AF40098E8A3 /* PopupView.swift */; };
 		E34B6F1B21C69D6D0098E8A3 /* SimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B6F1A21C69D6D0098E8A3 /* SimpleButton.swift */; };
 		E393E10121CE66A700117F35 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E393E10021CE66A700117F35 /* UIImageExtensions.swift */; };
+		E3D8ABAB21D27E3A008D466E /* ActivitiesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D8ABAA21D27E3A008D466E /* ActivitiesViewController.storyboard */; };
+		E3D8ABAD21D27E4E008D466E /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D8ABAC21D27E4E008D466E /* ActivitiesViewController.swift */; };
 		E3EEC0B221C66357005C3AD9 /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EEC0B121C66357005C3AD9 /* UILabelExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		E34B6F1821C69AF40098E8A3 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		E34B6F1A21C69D6D0098E8A3 /* SimpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleButton.swift; sourceTree = "<group>"; };
 		E393E10021CE66A700117F35 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		E3D8ABAA21D27E3A008D466E /* ActivitiesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivitiesViewController.storyboard; sourceTree = "<group>"; };
+		E3D8ABAC21D27E4E008D466E /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		E3EEC0B121C66357005C3AD9 /* UILabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +121,7 @@
 		E30A408221C2F9B9008B9B23 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E3D8ABA921D27E24008D466E /* ActivitiesViewController */,
 				E34B6F1121C67FF20098E8A3 /* AddTripsViewController */,
 				E30A408321C2F9C8008B9B23 /* TripsViewController */,
 			);
@@ -188,6 +193,15 @@
 			path = AddTripsViewController;
 			sourceTree = "<group>";
 		};
+		E3D8ABA921D27E24008D466E /* ActivitiesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E3D8ABAA21D27E3A008D466E /* ActivitiesViewController.storyboard */,
+				E3D8ABAC21D27E4E008D466E /* ActivitiesViewController.swift */,
+			);
+			path = ActivitiesViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -249,6 +263,7 @@
 				3BBD584121C3EDAB00F951F5 /* Colors.xcassets in Resources */,
 				E3455A4621C03F5000E73127 /* LaunchScreen.storyboard in Resources */,
 				3B7AFB5721C7E8AC00C5E13F /* AddTripsViewController.storyboard in Resources */,
+				E3D8ABAB21D27E3A008D466E /* ActivitiesViewController.storyboard in Resources */,
 				E30A408521C2F9F9008B9B23 /* TripsViewController.storyboard in Resources */,
 				3BBD583F21C3EBE000F951F5 /* Nunito-Regular.ttf in Resources */,
 				E3455A4321C03F5000E73127 /* Assets.xcassets in Resources */,
@@ -279,6 +294,7 @@
 				3B7AFB5921C8020500C5E13F /* AddButton.swift in Sources */,
 				E325513321C444AA00886466 /* UIButtonExtensions.swift in Sources */,
 				E3EEC0B221C66357005C3AD9 /* UILabelExtensions.swift in Sources */,
+				E3D8ABAD21D27E4E008D466E /* ActivitiesViewController.swift in Sources */,
 				3BAA735C21C2A1E800BD680A /* Data.swift in Sources */,
 				E30A408721C2FA0D008B9B23 /* TripsViewController.swift in Sources */,
 			);
